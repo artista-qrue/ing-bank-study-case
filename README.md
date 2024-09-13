@@ -1,7 +1,5 @@
 # ing-bank-study-case
 
-
-
 # ING Bank Study Case
 ======================
 
@@ -97,7 +95,6 @@ Add the following annotation to the WebSecurity class
 
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 
-
 Create a Spring Boot server that
 
 Has an admin user
@@ -107,10 +104,17 @@ Allows the user to get his/her information. Requires token
 Allows the admin user to get all users. Requires token
 Exercise the endpoints via curl and/or Postman.
 
+firstly, this curl will create a token, and u can use this token other enpoints,We call this curl:
+curl --location 'http://localhost:8080/login' \
+--header 'Content-Type: application/json' \
+--data '{
+"username": "admin",
+"password": "password"
+}'
 
 - Create Order: Create a new order for a given customer, asset, side, size and price
   Side can be BUY or SELL. Customer is a unique id for a customer
- 
+
 - curl --location 'http://localhost:8080/orders' \
   --header 'Content-Type: application/json' \
   --header 'Authorization: ••••••' \
