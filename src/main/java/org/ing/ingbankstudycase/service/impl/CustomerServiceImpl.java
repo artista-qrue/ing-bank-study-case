@@ -1,5 +1,7 @@
 package org.ing.ingbankstudycase.service.impl;
 
+import java.util.List;
+
 import org.ing.ingbankstudycase.model.Asset;
 import org.ing.ingbankstudycase.model.Customer;
 import org.ing.ingbankstudycase.repository.AssetRepository;
@@ -47,5 +49,18 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public Asset getCustomerTRYAsset(Long customerId) {
         return assetRepository.findByCustomerIdAndAssetName(customerId, "TRY");
+    }
+
+    @Override
+    public List<Asset> getAssetsByCustomer(Long customerId, String assetName, Double minUsableSize) {
+        if (assetName != null && minUsableSize != null) {
+            return assetRepository.findByCustomerIdAndAssetNameAndUsableSizeGreaterThanEqual(customerId, assetName, minUsableSize);
+        } else if (assetName != null) {
+            return List.of(assetRepository.findByCustomerIdAndAssetName(customerId, assetName));
+        } else if (minUsableSize != null) {
+            return assetRepository.findByCustomerIdAndUsableSizeGreaterThanEqual(customerId, minUsableSize);
+        } else {
+            return assetRepository.findByCustomerId(customerId);
+        }
     }
 }
