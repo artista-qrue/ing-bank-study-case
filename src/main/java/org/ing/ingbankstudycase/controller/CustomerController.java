@@ -1,5 +1,7 @@
 package org.ing.ingbankstudycase.controller;
 
+import javax.validation.constraints.NotNull;
+
 import org.ing.ingbankstudycase.controller.request.WithdrawRequest;
 import org.ing.ingbankstudycase.model.Customer;
 import org.ing.ingbankstudycase.service.CustomerService;
@@ -22,12 +24,12 @@ public class CustomerController {
     private final CustomerService customerService;
 
     @PostMapping("/{customerId}/deposit")
-    public Customer deposit(@PathVariable Long customerId, @RequestBody Double amount) {
+    public Customer deposit(@PathVariable Long customerId, @RequestBody @NotNull Double amount) {
         return customerService.deposit(customerId, amount);
     }
 
     @PostMapping("/{customerId}/withdraw")
-    public Customer withdraw(@PathVariable Long customerId, @RequestBody WithdrawRequest request) {
+    public Customer withdraw(@PathVariable Long customerId, @RequestBody @NotNull WithdrawRequest request) {
         return customerService.withdraw(customerId, request.getAmount(), request.getIban());
     }
 }

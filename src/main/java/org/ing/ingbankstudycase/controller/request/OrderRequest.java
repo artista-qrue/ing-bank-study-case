@@ -1,5 +1,8 @@
 package org.ing.ingbankstudycase.controller.request;
 
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+
 import org.ing.ingbankstudycase.model.Order;
 
 import lombok.Getter;
@@ -15,9 +18,16 @@ import lombok.Setter;
 @RequiredArgsConstructor
 public class OrderRequest {
 
+    @NotNull
     private Long customerId;
+
+    @NotEmpty
     private String assetName;
+
+    @NotNull
     private Order.Side side;
+    @NotNull
     private Double size;
+    @NotNull
     private Double price;
 }

@@ -1,6 +1,7 @@
 package org.ing.ingbankstudycase.controller;
 
 import java.util.List;
+import javax.validation.constraints.NotNull;
 
 import org.ing.ingbankstudycase.model.User;
 import org.ing.ingbankstudycase.service.impl.UserService;
@@ -21,7 +22,7 @@ public class UserController {
     }
 
     @PostMapping("/users")
-    public User createUser(@RequestBody User user) {
+    public User createUser(@RequestBody @NotNull User user) {
         return userService.create(user);
     }
 
