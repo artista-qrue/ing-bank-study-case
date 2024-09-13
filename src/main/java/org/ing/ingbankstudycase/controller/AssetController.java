@@ -1,5 +1,7 @@
 package org.ing.ingbankstudycase.controller;
 
+import java.util.List;
+
 import org.ing.ingbankstudycase.model.Asset;
 import org.ing.ingbankstudycase.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
