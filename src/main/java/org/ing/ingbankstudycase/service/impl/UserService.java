@@ -2,12 +2,15 @@ package org.ing.ingbankstudycase.service.impl;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.ing.ingbankstudycase.model.User;
 import org.ing.ingbankstudycase.repository.UserRepository;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
+@Transactional
 public class UserService {
 
     private final UserRepository userRepository;

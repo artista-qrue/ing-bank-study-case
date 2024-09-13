@@ -3,6 +3,8 @@ package org.ing.ingbankstudycase.service.impl;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.ing.ingbankstudycase.model.Asset;
 import org.ing.ingbankstudycase.model.Order;
 import org.ing.ingbankstudycase.repository.AssetRepository;
@@ -19,6 +21,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Service
 @Slf4j
+@Transactional
 public class OrderServiceImpl implements OrderService {
 
     @Autowired
