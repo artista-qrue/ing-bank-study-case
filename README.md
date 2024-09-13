@@ -1,5 +1,88 @@
 # ing-bank-study-case
 
+
+
+# ING Bank Study Case
+======================
+
+## Overview
+------------
+
+This repository contains the solution to the ING Bank study case, which aims to [briefly describe the goal of the study case].
+
+## Table of Contents
+-----------------
+
+* [Getting Started](#getting-started)
+* [Project Structure](#project-structure)
+* [Features](#features)
+* [Requirements](#requirements)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contributing](#contributing)
+* [License](#license)
+
+## Getting Started
+---------------
+
+To get started with the project, please follow these steps:
+
+1. Clone the repository: `git clone https://github.com/artista-qrue/ing-bank-study-case
+2. Install the dependencies: `npm install` or `yarn install`
+3. Start the application: `npm start` or `yarn start`
+
+## Project Structure
+-----------------
+
+The project is structured as follows:
+
+* `src/`: contains the source code of the application
+* `public/`: contains the static assets of the application
+* `tests/`: contains the unit tests and integration tests of the application
+
+## Features
+------------
+
+The application has the following features:
+
+* [List the features of the application]
+
+## Requirements
+------------
+
+The application requires the following dependencies:
+
+* [List the dependencies of the application]
+
+## Installation
+------------
+
+To install the dependencies, run the following command:
+
+* `npm install` or `yarn install`
+
+## Usage
+-----
+
+To start the application, run the following command:
+
+* `npm start` or `yarn start`
+
+## Contributing
+------------
+
+Contributions are welcome! To contribute to the project, please follow these steps:
+
+1. Fork the repository: `git fork https://github.com/your-username/ing-bank-study-case.git`
+2. Create a new branch: `git checkout -b your-branch-name`
+3. Make changes and commit: `git commit -m "your commit message"`
+4. Push changes: `git push origin your-branch-name`
+5. Create a pull request: `https://github.com/your-username/ing-bank-study-case/pulls`
+
+## License
+-------
+
+The project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 Login as user admin and call the get all endpoint. It should be allowed.
 
 Login as user Bob and call the get all endpoint. It should be rejected with a status 403 Forbidden.
